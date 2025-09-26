@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+        <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+        
+        <title>Frontend Mentor | Intro section with dropdown navigation</title>
+        <link rel="stylesheet" href="assets/styles/navigation.css">
+        <link rel="stylesheet" href="assets/styles/acceuil.css">
+        <link rel="stylesheet" href="assets/styles/footer.css">
+    </head>
+    <body>
+        <nav class="navigation">
+            <img class="logo" src="assets/images/logo.svg" alt="logo">
+
+            <input type="checkbox" id="menu-toggle">
+            <label for="menu-toggle" class="menu-icon">&#9776;</label>
+
+            <div class="menu">
+                <div class="close">                    
+                    <label for="menu-toggle" class="closeLabel">&#10005;</label>
+                </div>
+                <div class="onglets">
+                    <div id="ongletnoClick" class="onglet" onclick="clickFeatures()" name="Features">
+                        <p>Features</p>
+                        <img src="assets/images/icon-arrow-down.svg" alt="icon-arrow-down">
+                    </div>
+                    <div id="Features" class="Features">
+                        <div class="ongletFeatures">
+                            <img src="assets/images/icon-todo.svg" alt="todo">
+                            <p>Todo List</p>
+                        </div>
+                        <div class="ongletFeatures">
+                            <img src="assets/images/icon-calendar.svg" alt="calendrier">
+                            <p>Calendar</p>
+                        </div>
+                        <div class="ongletFeatures">
+                            <img src="assets/images/icon-reminders.svg" alt="reminders">
+                            <p>Reminders</p>
+                        </div>
+                        <div class="ongletFeatures">
+                            <img src="assets/images/icon-planning.svg" alt="planning">
+                            <p>Planning</p>
+                        </div>
+                    </div>
+                    <div id="ongletnoClick" class="onglet" name="company" onclick="clickCompany()">
+                        <p>Company</p>
+                        <img src="assets/images/icon-arrow-down.svg" alt="icon-arrow-down">
+                    </div>
+                    <div id="Company" class="Company">
+                        <a>History</a>
+                        <a>Our Team</a>
+                        <a>Blog</a>
+                    </div>
+                    <p id="ongletnoClick" class="onglet">Careers</p>
+                    <p id="ongletnoClick" class="onglet">About</p>
+                </div>
+                <div class="connexionButtons">
+                    <button class="login">Login</button>
+                    <button class="register">Register</button>
+                </div>
+            </div>
+        </nav>
+
+        <div class="hero">
+            <div class="info">
+                <div class="title-box">
+                    <h1 class="title">Make 
+                        <br>remote work</h1>
+                    <p class="sous-titre">Get your team in sync, no matter your location. Streamline processes, 
+                        create team rituals, and watch productivity soar.
+                    </p>
+                    <button class="more">Learn more</button>
+                </div>
+                <div class="sponsor">
+                    <img src="assets/images/client-databiz.svg" alt="databiz">
+                    <img src="assets/images/client-audiophile.svg" alt="audiophile">
+                    <img src="assets/images/client-meet.svg" alt="meet">
+                    <img src="assets/images/client-maker.svg" alt="maker">
+                </div>
+            </div>
+            <img id="heroimg" class="heroimg" src="assets/images/image-hero-desktop.png" alt="heroimg">
+        </div>
+        <div class="attribution">
+            Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+            Coded by <a href="#">Lamaxime</a>.
+        </div>
+
+        <script>
+            function updateHeroImage() {
+                const img = document.getElementById("heroimg");
+                if (window.innerWidth <= 768) {
+                    img.src = "assets/images/image-hero-mobile.png";
+                    console.log("image changée");
+                } else {
+                    img.src = "assets/images/image-hero-desktop.png";
+                    console.log("image changée")
+                }
+            }
+
+            // Exécution au chargement
+            updateHeroImage();
+
+            // Exécution si on redimensionne l’écran
+            window.addEventListener("resize", updateHeroImage);
+        </script>
+        <script src="assets/scripts/onglet.js"></script>
+    </body>
+</html>

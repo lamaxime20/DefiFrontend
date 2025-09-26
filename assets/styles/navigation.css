@@ -1,0 +1,385 @@
+.navigation {
+    width: 100%;
+    height: auto;
+    background-color: transparent;
+    display: flex;
+    flex-direction: row;
+    gap: 5%;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    width: 5%;
+    height: 30px;
+    margin-left: 5%;
+    margin-top: 12px;
+}
+
+.menu {
+    width: 80%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.onglets {
+    width: 85%;
+    display: flex;
+    flex-direction: row;
+    gap: 0px;
+    align-items: center;
+}
+
+.onglet {
+    background-color: transparent;
+    border: none;
+    width: 13%;
+    gap: 3px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    cursor: pointer;
+}
+
+.onglet img {
+    width: 10px;
+    height: 5px;
+    cursor: pointer;
+}
+
+.onglet p {
+    background-color: transparent;
+    border: none;
+}
+
+#ongletClick button, #ongletClick {
+    font-weight: 900;
+}
+
+.connexionButtons {
+    display: flex;
+    flex-direction: row;
+    gap: 15%;
+    width: 30%;
+    margin-right: 50px;
+    justify-content: right;
+}
+
+.login {
+    background-color: transparent;
+    border: none;
+    color: #777;
+    cursor: pointer;
+}
+
+.register {
+    width: 45%;
+    height: 40px;
+    border-radius: 20px;
+    border: 1px solid #aaa;
+    background-color: transparent;
+    color: #777;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.onglets p:hover {
+    color: black;
+    font-weight: bold;
+    transition: 0.3s ease;
+}
+
+.onglet:hover img {
+    transform: rotate(180deg);
+    transition: transform 0.3s ease;
+}
+
+.rotate {
+  transform: rotate(180deg);
+  transition: transform 0.3s ease;
+}
+
+.login:hover {
+    color: black;
+    font-weight: bold;
+    transition: 0.3s ease;
+}
+
+.register:hover {
+    background-color: black;
+    color: white;
+    border-color: black;
+    transition: 0.3s ease;
+}
+
+#menu-toggle {
+    display: none;
+    cursor: pointer;
+    padding: 10px;
+}
+
+.menu-icon {
+    display: none;
+    margin-left: 70%;
+    width: 50%;
+    font-size: 40px;
+}
+
+.close {
+    display: none;
+}
+
+.closeLabel {
+    cursor: pointer;
+}
+
+.close:hover {
+    font-weight: bold;
+}
+
+.Features {
+    position: absolute;
+    display: none;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    width: 140px;
+    height: auto;
+    top: 40px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    padding-left: 10px;
+    padding-right: 10px;
+    border-radius: 15px;
+    margin-left: -30px;
+    background-color: #fff;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+    z-index: 1000;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.ongletFeatures {
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+    align-items: center;
+    width: 80%;
+    height: 30px;
+    gap: 5px;
+    cursor: pointer;
+}
+
+.ongletFeatures img {
+    width: 15px;
+    height: 15px;
+}
+
+.ongletFeatures p {
+    width: 50px;
+    font-size: 15px
+}
+
+.Company {
+    position: absolute;
+    display: none;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    width: 85px;
+    height: auto;
+    border-radius: 15px;
+    gap: 10px;
+    top: 40px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    padding-left: 10px;
+    padding-right: 10px;
+    margin-left: 75px;
+    background-color: #fff;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+    z-index: 1000;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.Company a {
+    width: 80%;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+.Company a:hover {
+    font-weight: bold;
+}
+
+/* 📌 Style par défaut (desktop) déjà présent dans ton code */
+
+
+/* =========================*/
+/* 📱 Tablette (≤ 1024px) */
+/* ========================= */
+@media (max-width: 1024px) {
+    .logo {
+        width: 8%;
+        margin-left: 3%;
+    }
+
+    .menu {
+        width: 85%;
+        gap: 20px;
+    }
+
+    .onglets {
+        gap: 10px;
+    }
+
+    .onglet {
+        width: auto; /* plus flexible */
+        font-size: 15px;
+    }
+
+    .connexionButtons {
+        gap: 10%;
+        width: auto;
+        margin-right: 20px;
+    }
+
+    .register {
+        width: auto;
+        padding: 8px 16px;
+    }
+}
+
+
+/* ========================= */
+/* 📱 Mobile (≤ 768px) */
+/* ========================= */
+@media (max-width: 768px) {
+    .navigation {
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        padding: 10px 20px;
+        position: relative;
+    }
+
+    .logo {
+        width: 15%;
+        margin: 0;
+    }
+
+    .menu {
+        display: none;
+        width: 30%;
+        height: 95vh;
+        flex-direction: column;
+        align-items: flex-start;
+        position: fixed;
+        top: 0;
+        right: 0;
+        padding: 20px;
+        background-color: #fff;
+        box-shadow: -2px 0 10px rgba(0,0,0,0.1);
+        z-index: 1000;
+    }
+
+    .onglets {
+        width: 100%;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .onglet {
+        width: 100%;
+        justify-content: flex-start;
+    }
+
+    .connexionButtons {
+        width: 100%;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .register {
+        width: 100%;
+        padding: 10px;
+    }
+
+    .menu-icon {
+        display: block;
+        font-size: 30px;
+        cursor: pointer;
+    }
+
+    #menu-toggle:checked ~ .menu {
+        display: flex;
+    }
+
+    .close {
+        display: flex;
+        flex-direction: flex-end;
+        justify-content: right;
+        width: 100%;
+    }
+
+    .close button {
+        font-size: 30px;
+        font-weight: bold;
+        background: none;
+        border: none;
+        cursor: pointer;
+    }
+
+    .close button:checked ~ .menu {
+        display: none;
+    }
+
+    .Features {
+        position: relative;
+        top: 0px;
+        justify-content: flex-start;
+        padding: 0px;
+        background-color: transparent;
+        box-shadow: none;
+    }
+
+    .Company {
+        position: relative;
+        top: 0px;
+        margin-left: -60px;
+        justify-content: flex-start;
+        padding: 0px;
+        background-color: transparent;
+        box-shadow: none;
+    }
+}
+
+
+/* ========================= */
+/* 📱 Petit mobile (≤ 480px) */
+/* ========================= */
+@media (max-width: 480px) {
+    .logo {
+        width: 25%;
+    }
+
+    .onglets {
+        gap: 10px;
+    }
+
+    .onglet p {
+        font-size: 14px;
+    }
+
+    .login {
+        font-size: 14px;
+    }
+
+    .register {
+        font-size: 14px;
+        padding: 6px 14px;
+        height: auto;
+    }
+}
